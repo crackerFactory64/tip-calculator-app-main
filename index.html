@@ -9,9 +9,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -30,30 +33,82 @@
                 alt="dollar sign"
                 class="input__icon"
               />
-              <input name="bill" class="form__input" id="bill" />
+              <input
+                name="bill"
+                class="form__input"
+                id="bill"
+                placeholder="0.00"
+              />
             </div>
             <h2 class="form__header">Select Tip %</h2>
             <div class="form__buttons">
-              <a href="#" class="form__button form__button--percentage" id="tip-5">5%</a>
-              <a href="#" class="form__button form__button--percentage" id="tip-10">10%</a>
-              <a href="#" class="form__button form__button--percentage" id="tip-15">15%</a>
-              <a href="#" class="form__button form__button--percentage" id="tip-25">25%</a>
-              <a href="#" class="form__button form__button--percentage" id="tip-50">50%</a>
-              <input class="form__button form__button--percentage form__button--percentage--custom" id="tip-custom" placeholder="Custom"></button>
+              <a
+                href="#"
+                class="form__button form__button--percentage"
+                id="tip-5"
+                >5%</a
+              >
+              <a
+                href="#"
+                class="form__button form__button--percentage"
+                id="tip-10"
+                >10%</a
+              >
+              <a
+                href="#"
+                class="form__button form__button--percentage"
+                id="tip-15"
+                >15%</a
+              >
+              <a
+                href="#"
+                class="form__button form__button--percentage"
+                id="tip-25"
+                >25%</a
+              >
+              <a
+                href="#"
+                class="form__button form__button--percentage"
+                id="tip-50"
+                >50%</a
+              >
+              <div
+                class="
+                  form__button
+                  form__button--percentage
+                  form__button--percentage--custom
+                "
+              >
+                <input
+                  class="form__input form__input--custom"
+                  id="tip-custom"
+                  placeholder="Custom"
+                />
+              </div>
             </div>
-            <h2 class="form__header">Number of People </h2>
-            <div class="input-container"><img src="images/icon-person.svg" alt="person icon"><input name="people" class="form__input" /></div>
+            <h2 class="form__header">Number of People</h2>
+            <div class="input-container">
+              <img src="images/icon-person.svg" alt="person icon" /><input
+                placeholder="0"
+                name="people"
+                class="form__input"
+              />
+            </div>
           </div>
           <div class="results container">
             <div class="result-container">
-               <p class="results__label">Tip Amount<br>/ person</p>
-               <p class="result">$0.00</p>
+              <p class="results__label">
+                Tip Amount<br /><span class="small">/ person</span>
+              </p>
+              <p class="result">$0.00</p>
             </div>
-             <div class="result-container">
-               <p class="results__label">Total<br>/ person</p>
-               <p class="result">$0.00</p>
-             </div>
-              <a href="#" class="form__button form__button--reset">Reset</a>
+            <div class="result-container">
+              <p class="results__label">
+                Total<br /><span class="small">/ person</span>
+              </p>
+              <p class="result">$0.00</p>
+            </div>
+            <a href="#" class="form__button form__button--reset">Reset</a>
           </div>
         </div>
       </main>

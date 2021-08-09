@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -42,5 +42,107 @@ body {
   background: #fff;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
-  padding: 2em 0;
+  padding: 1em 0 3.5em 0;
+}
+
+.form__header {
+  font-size: 1rem;
+  color: var(--darkerGrayishCyan);
+}
+
+.input-container {
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--lighterGrayishCyan);
+  padding: 0.5em 1em;
+}
+
+.form__input {
+  border: none;
+  width: 90%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Space Mono", sans-serif;
+  background-color: var(--lighterGrayishCyan);
+  color: var(--veryDarkCyan);
+}
+
+.form__buttons {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+}
+
+.form__button {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.form__button--percentage {
+  width: 6em;
+  background-color: var(--veryDarkCyan);
+  color: var(--lighterGrayishCyan);
+  padding: 0.25em 0;
+}
+
+.form__button--percentage--custom {
+  border: none;
+  background-color: var(--lighterGrayishCyan);
+}
+
+.form__input--custom {
+  width: 75%;
+  color: var(--veryDarkCyan);
+}
+
+::placeholder {
+  color: var(--veryDarkCyan);
+  opacity: 0.8;
+}
+
+.results {
+  margin-top: 1em;
+  width: 85%;
+  background-color: var(--veryDarkCyan);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.result-container {
+  color: var(--lighterGrayishCyan);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 4.5em;
+}
+
+.small {
+  font-size: 0.75rem;
+  color: var(--lightGrayishCyan);
+  opacity: 0.8;
+}
+
+.result {
+  font-size: 2rem;
+  padding: 0;
+  color: var(--strongCyan);
+  font-weight: 700;
+}
+
+.form__button--reset {
+  margin-top: 1em;
+  text-transform: uppercase;
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+  padding: 0.25em 0;
+  font-size: 1.35rem;
 }

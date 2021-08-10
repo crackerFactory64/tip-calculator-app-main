@@ -93,15 +93,24 @@ body {
   padding: 0.25em 0;
 }
 
+.form__button--percentage:hover,
+.form__button--percentage:focus {
+  background-color: #9fe8df;
+  color: var(--veryDarkCyan);
+}
+
 .form__button--percentage--custom {
   border: none;
+  background-color: var(--lighterGrayishCyan);
+}
+
+.form__button--percentage--custom:hover {
   background-color: var(--lighterGrayishCyan);
 }
 
 .form__input--custom {
   width: 75%;
   color: var(--veryDarkCyan);
-  text-align: center;
 }
 
 ::placeholder {
@@ -145,6 +154,11 @@ body {
   color: var(--veryDarkCyan);
   padding: 0.25em 0;
   font-size: 1.35rem;
+}
+
+.form__button--reset:hover,
+.form__button--reset:focus {
+  background-color: #9fe8df;
 }
 
 @media screen and (min-width: 1000px) {
@@ -191,7 +205,9 @@ body {
   }
 
   .form__input--custom {
+    width: 90%;
     font-size: 1.25rem;
+    text-align: center;
   }
 
   .results {

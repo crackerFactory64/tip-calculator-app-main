@@ -51,7 +51,6 @@ body {
 }
 
 .input-container {
-  border: 1px solid transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,6 +101,7 @@ body {
 .form__input--custom {
   width: 75%;
   color: var(--veryDarkCyan);
+  text-align: center;
 }
 
 ::placeholder {
@@ -145,4 +145,60 @@ body {
   color: var(--veryDarkCyan);
   padding: 0.25em 0;
   font-size: 1.35rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header__logo {
+    align-self: center;
+  }
+
+  .app {
+    width: 75%;
+    align-self: center;
+    padding: 1em 1em 2em 1em;
+    border-radius: 10px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input {
+    width: 42.5%;
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .form__buttons {
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .form__button--percentage {
+    width: 100%;
+  }
+
+  .form__input--custom {
+    font-size: 1.25rem;
+  }
+
+  .results {
+    width: 42.5%;
+  }
+
+  .form__button--reset {
+    margin-top: 6em;
+  }
 }

@@ -51,6 +51,8 @@ body {
 }
 
 .input-container {
+  border: 2px solid transparent;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,6 +69,10 @@ body {
   font-family: "Space Mono", sans-serif;
   background-color: var(--lighterGrayishCyan);
   color: var(--veryDarkCyan);
+}
+
+.form__input:focus {
+  outline: none;
 }
 
 .form__buttons {
@@ -93,14 +99,18 @@ body {
   padding: 0.25em 0;
 }
 
-.form__button--percentage:hover,
-.form__button--percentage:focus {
+.form__button--percentage:hover {
   background-color: #9fe8df;
   color: var(--veryDarkCyan);
 }
 
+.form__button--percentage--selected {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
 .form__button--percentage--custom {
-  border: none;
+  border: 2px solid transparent;
   background-color: var(--lighterGrayishCyan);
 }
 
@@ -169,16 +179,17 @@ body {
   .bg {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  .header__logo {
-    align-self: center;
+  .header {
+    margin-top: 6em;
+    margin-bottom: 3em;
   }
 
   .app {
-    width: 75%;
-    align-self: center;
+    width: 60%;
     padding: 1em 1em 2em 1em;
     border-radius: 10px;
   }

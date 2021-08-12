@@ -21,6 +21,10 @@ body {
   padding: 0;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .container {
   width: 90%;
   max-width: 400px;
@@ -45,9 +49,20 @@ body {
   padding: 1em 0 3.5em 0;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .form__header {
   font-size: 1rem;
   color: var(--darkerGrayishCyan);
+}
+
+.error {
+  color: #ff5b33;
+  visibility: hidden;
 }
 
 .input-container {
@@ -99,7 +114,8 @@ body {
   padding: 0.25em 0;
 }
 
-.form__button--percentage:hover {
+.form__button--percentage:hover,
+.form__button--percentage:focus {
   background-color: #9fe8df;
   color: var(--veryDarkCyan);
 }

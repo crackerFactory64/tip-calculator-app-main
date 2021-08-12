@@ -13,7 +13,32 @@ for (let i = 0; i < inputs.length; i++) {
     inputs[i].parentNode.style.borderColor = "#5BA89E";
   };
   inputs[i].onblur = () => {
-    inputs[i].parentNode.style.borderColor = "transparent";
+    if (i == 1) {
+      inputs[1].onchange = () => {
+        for (let j = 0; j < buttons.length; j++) {
+          buttons[j].classList.remove("form__button--percentage--selected");
+        }
+        if (inputs[1].value > 0) {
+          tip = inputs[1].value / 100;
+          inputs[1].parentNode.style.borderColor = "transparent";
+          document.getElementById("error" + (i + 1)).style.visibility =
+            "hidden";
+        } else {
+          inputs[1].parentNode.style.borderColor = "#FF5B33";
+          document.getElementById("error" + (i + 1)).style.visibility =
+            "visible";
+        }
+      };
+      inputs[1].parentNode.style.borderColor = "transparent";
+    } else {
+      if (inputs[i].value <= 0) {
+        inputs[i].parentNode.style.borderColor = "#FF5B33";
+        document.getElementById("error" + (i + 1)).style.visibility = "visible";
+      } else {
+        inputs[i].parentNode.style.borderColor = "transparent";
+        document.getElementById("error" + (i + 1)).style.visibility = "hidden";
+      }
+    }
   };
 }
 
@@ -23,7 +48,11 @@ for (let i = 0; i < buttons.length; i++) {
       buttons[i].classList.remove("form__button--percentage--selected");
     }
     buttons[i].classList.add("form__button--percentage--selected");
-    tip = buttons[i].id / 100;
+    inputs[1].parentNode.style.borderColor = "transparent";
+    document.getElementById("error2").style.visibility = "hidden";
+    if (i != 5) {
+      tip = buttons[i].id / 100;
+    }
     tipPerPerson = (bill / people) * tip;
     if (bill != 0 && people != 0) {
       document.getElementById("tip").innerHTML = "$" + tipPerPerson.toFixed(2);

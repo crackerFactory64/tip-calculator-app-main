@@ -26,7 +26,10 @@
       <main class="app">
         <div class="row">
           <div class="input container">
-            <h2 class="form__header">Bill</h2>
+            <div class="header-container">
+              <h2 class="form__header">Bill</h2>
+              <p class="error" id="error1">Can't be zero</p>
+            </div>
             <div class="input-container">
               <img
                 src="images/icon-dollar.svg"
@@ -34,13 +37,16 @@
                 class="input__icon"
               />
               <input
-                name="bill"
+                type="number"
                 class="form__input"
                 id="bill"
                 placeholder="0.00"
               />
             </div>
-            <h2 class="form__header">Select Tip %</h2>
+            <div class="header-container">
+              <h2 class="form__header">Select Tip %</h2>
+              <p class="error" id="error2">Can't be zero</p>
+            </div>
             <div class="form__buttons">
               <a href="#" class="form__button form__button--percentage" id="5"
                 >5%</a
@@ -66,16 +72,21 @@
               >
                 <input
                   class="form__input form__input--custom"
+                  type="number"
                   id="tip-custom"
                   placeholder="Custom"
                 />
               </div>
             </div>
-            <h2 class="form__header">Number of People</h2>
+            <div class="header-container">
+              <h2 class="form__header">Number of People</h2>
+              <p class="error" id="error3">Can't be zero</p>
+            </div>
             <div class="input-container">
               <img src="images/icon-person.svg" alt="person icon" /><input
                 placeholder="0"
                 id="people"
+                type="number"
                 class="form__input"
               />
             </div>
